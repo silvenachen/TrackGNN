@@ -31,3 +31,13 @@ Alternatively, to run C Simulation, Synthesis or C-RTL Co-similation, you can un
 vitis_hls -f project.tcl
 ```
 This will run the simulation and synthesis steps necessary for evaluating the design without full hardware implementation.
+
+## References
+This project is based on the novel algorithm proposed in [**Novel deep learning methods for track reconstruction**](https://arxiv.org/abs/1810.06111 ). The repository can be found at [**Trigger-Detection-Pipeline**](https://bitbucket.org/dtyu/trigger-detection-pipeline/src/main/). The specific part implemented in TrackGNN is `sPHENIX/tracking-GNN`. The architecture design of our accelerator is based on [**FlowGNN: A Dataflow Architecture for Real-Time Workload-Agnostic Graph Neural Network Inference**](https://ieeexplore.ieee.org/abstract/document/10071015), with improved sorting algorithm, quantization techniques and better FIFO balancing.
+
+##Authors and Contact Information
+This project is co-authored by:
+-**Hanqing Zhang** (hanqing.zhang@zju.edu.cn)
+-**Shuyang Li** (shuyanglee10008@gmail.com)
+Under the guidance of **Prof. Cong Callie Hao** at Georgia Institute of Technology.
+For any questions or issues related to this project, please feel free to reach out to Shuyang Li or Hanqing Zhang via e-mail. 
