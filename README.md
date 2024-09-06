@@ -5,6 +5,8 @@ This project focuses on developing a highly efficient accelerator to process col
 
 ### Background and Model Architecture
 The TrackGNN accelerator implements two models with the same GNN architecture but different configurations. Each model processes input features of size 5 for each node, but they differ in embedding size and the number of layers. For the first model, the input network transforms the node embeddings to a dimension of 64, and the model has a total number of 4 layers. In the second optimized version, the node embedding size is reduced to 8 dimensions, and the model only requires 1 layer toto perform segmentation.
+
+
 ![TrackGNN Architecture](image/model.jpg "Overview of GNN architecture for Track Segment Classification.")
 
 
