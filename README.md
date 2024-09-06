@@ -4,7 +4,7 @@ welcome to the open-sourced repository for TrackGNN!
 This project focuses on developing a highly efficient accelerator to process collision data and solve **track reconstruction** tasks from high-energy physics experiments. Our accelerator is specifically tailored for **FPGA** platforms, with optimized, **FIFO-Balanced parallel processing** of graph data obtained from an actual particle detector, **sPHENIX Experiment at RHIC**.
 The TrackGNN accelerator implements two models with the same GNN architecture but different configurations. 
 
-![TrackGNN Architecture](images/TrackGNN.jpg)
+![TrackGNN Architecture](image/model.jpg)
 ### Background and Model Architecture
 
 The figure above illustrates the architecture of the GNN model used for track segmentation, which consists of three main network components: **InputNet**, **EdgeNet**, and **NodeNet**. This architecture processes a graph representing hits in a particle detector and performs both node and edge classification tasks to identify true particle tracks.
