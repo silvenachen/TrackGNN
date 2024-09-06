@@ -1,5 +1,5 @@
 # TrackGNN: A Highly Parallelized and FIFO-Balanced Accelerator for the Particle-Track-Classification GNN on FPGAs
-welcome to the open-sourced repository for TrackGNN!
+Welcome to the open-sourced repository for TrackGNN!
 ## Overview
 This project focuses on developing a highly efficient accelerator to process collision data and solve **track reconstruction** tasks from high-energy physics experiments. Our accelerator is specifically tailored for **FPGA** platforms, with optimized, **FIFO-Balanced parallel processing** of graph data obtained from an actual particle detector, **sPHENIX Experiment at RHIC**.
 
@@ -12,3 +12,12 @@ The above figure illustrated the architecture of the GNN model, whcih consists o
 - **EdgeNetwork**: The EdgeNetwork evaluates the connections between node embeddings, predicting whether a pair of hits is part of the same track or a spurious pair. It uses a sigmoid activation in the final layer to output a score for each edge, with scores closer to 1 indicating a valid track connection and scores closer to 0 suggesting a false connection. A threshold of 0.5 is typically applied to classify the edges.
 - **NodeNetwork**: The NodeNetwork updates the embeddings of each node by aggregating information from its neighboring nodes and the edges connecting them. 
 
+## FPGA Implementation
+### How to Use
+The two accelerators with different configurations can be found at ./TrackGNN/prj/dim_8_layer_1/ and ./TrackGNN/prj/dim_64_layer_4, respectively. We have prepared the source codes and Makefile to deploy the accelerator on target U280 platform. To generate bitstream for the FPGA, follow these steps:
+
+```bash
+make all
+
+Once the bitstream is generated, program the FPGA and execute the host application:
+./host_app ./path_to_your_xclbin_file
