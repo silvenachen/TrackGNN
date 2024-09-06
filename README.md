@@ -14,10 +14,13 @@ The above figure illustrated the architecture of the GNN model, whcih consists o
 
 ## FPGA Implementation
 ### How to Use
-The two accelerators with different configurations can be found at ./TrackGNN/prj/dim_8_layer_1/ and ./TrackGNN/prj/dim_64_layer_4, respectively. We have prepared the source codes and Makefile to deploy the accelerator on target U280 platform. To generate bitstream for the FPGA, follow these steps:
+The two accelerators with different configurations can be found at `./TrackGNN/prj/dim_8_layer_1/` and `./TrackGNN/prj/dim_64_layer_4`, respectively. We have prepared the source codes and Makefile to deploy the accelerator on target U280 platform. To generate bitstream for the FPGA, follow these steps:
 
 ```bash
 make all
+```
 
 Once the bitstream is generated, program the FPGA and execute the host application:
+```bash
 ./host_app ./path_to_your_xclbin_file
+```
