@@ -16,6 +16,8 @@ The above figure illustrated the architecture of the GNN model, whcih consists o
 ### How to Use
 The two accelerators with different configurations can be found at `./TrackGNN/prj/dim_8_layer_1/` and `./TrackGNN/prj/dim_64_layer_4`, respectively. We have prepared the source codes and Makefile to deploy the accelerator on target U280 platform. To generate bitstream for the FPGA, follow these steps:
 
+In the `config.h` file, uncomment  `#EMU` to enable emulation mode for hardware implementation and make the project.
+
 ```bash
 make all
 ```
@@ -24,3 +26,8 @@ Once the bitstream is generated, program the FPGA and execute the host applicati
 ```bash
 ./host_app ./path_to_your_xclbin_file
 ```
+Alternatively, to run C Simulation, Synthesis or C-RTL Co-similation, you can uncomment `#SIM` and execute the `project.tcl` file as follows:
+```bash
+vitis_hls -f project.tcl
+```
+This will run the simulation and synthesis steps necessary for evaluating the design without full hardware implementation.
