@@ -17,6 +17,16 @@ The above figure illustrated the architecture of the GNN model, which consists o
 - **NodeNetwork**: The NodeNetwork updates the embeddings of each node by aggregating information from its neighboring nodes and the edges connecting them. 
 
 ## FPGA Implementation
+### Experiment Setup
+All experiments are conducted on the **AMD Alveo U280 FPGA** using **Vitis v2022.1**, with a target frequency of 100MHz. The U280 FPGA is equipped with 4032 BRAM 18K blocks, 9024 DSP slices, 2.6M flip-flops, 1.3M LUTs, and 960 URAM blocks.
+
+### Performance Metrics
+The table below shows the latency results per graph for two GNN configurations at 100MHz.
+| Model Configuration  | Node Embedding Dim | Number of Layers | Target Frequency | Measured Latency (ms) |
+|----------------------|--------------------|------------------|------------------|-----------------------|
+| **Model 1**          | 64                 | 4                | 100 MHz          | 150.2                 |
+| **Model 2**          | 8                  | 1                | 100 MHz          | 30.5                  |
+
 ### How to Use
 The two accelerators with different configurations can be found at `./TrackGNN/prj/dim_8_layer_1/` and `./TrackGNN/prj/dim_64_layer_4`, respectively. We have prepared the source codes and Makefile to deploy the accelerator on target U280 platform. To generate bitstream for the FPGA, follow these steps:
 
