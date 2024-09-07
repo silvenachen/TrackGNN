@@ -22,10 +22,10 @@ All experiments are conducted on the **AMD Alveo U280 FPGA** using **Vitis v2022
 
 ### Performance Metrics
 The table below shows the latency results per graph for two GNN configurations at 100MHz.
-| Model Configuration  | Node Embedding Dim | Number of Layers | Target Frequency | Measured Latency (ms) |
-|----------------------|--------------------|------------------|------------------|-----------------------|
-| **Model 1**          | 64                 | 4                | 100 MHz          | 150.2                 |
-| **Model 2**          | 8                  | 1                | 100 MHz          | 30.5                  |
+| Node Embedding Dim | Number of Layers | Target Frequency | Measured Latency (us) |
+|--------------------|------------------|------------------|-----------------------|
+| 64                 | 4                | 100 MHz          | -                     |
+| 8                  | 1                | 100 MHz          | 18.29                 |
 
 ### How to Use
 The two accelerators with different configurations can be found at `./TrackGNN/prj/dim_8_layer_1/` and `./TrackGNN/prj/dim_64_layer_4`, respectively. We have prepared the source codes and Makefile to deploy the accelerator on target U280 platform. To generate bitstream for the FPGA, follow these steps:
