@@ -51,8 +51,8 @@ This project is based on the novel algorithm proposed in [**Novel deep learning 
 
 ## Authors and Contact Information
 This project is co-authored by:
--**Hanqing Zhang** (hanqing.zhang@zju.edu.cn)
--**Shuyang Li** (shuyanglee10008@gmail.com)
+- **Hanqing Zhang** (hanqing.zhang@zju.edu.cn)
+- **Shuyang Li** (shuyanglee10008@gmail.com)
 Under the guidance of **Prof. Cong Callie Hao** at Georgia Institute of Technology.
 
 For any questions or issues related to this project, please feel free to reach out to Shuyang Li or Hanqing Zhang via e-mail. 
