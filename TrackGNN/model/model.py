@@ -88,6 +88,7 @@ class GnnClassifier(nn.Module):
             if n == self.num_of_layers:
                 break
             x += self.node_network(x, e, edge_index)
+        return e
 
 
 if __name__ == "__main__":
