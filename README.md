@@ -28,6 +28,8 @@ The table below shows the latency results per graph for two GNN configurations a
 | 8                  | 1                | 100 MHz          | 18.29                 |
 
 ### How to Use
+Under path `./TrackGNN/scripts/`, we provides scripts to enable automated generation of input and parameter data and configurations for hardware deployment. Simply run `generate.py`, and the results can be found under `./config/`, `./data_files/` and `./input_files/`, respectively.
+
 The two accelerators with different configurations can be found at `./TrackGNN/prj/dim_8_layer_1/` and `./TrackGNN/prj/dim_64_layer_4`, respectively. We have prepared the source codes and Makefile to deploy the accelerator on target U280 platform. To generate bitstream for the FPGA, follow these steps:
 
 In the `config.h` file, uncomment  `#EMU` to enable emulation mode for hardware implementation and make the project.
