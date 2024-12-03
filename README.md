@@ -34,13 +34,20 @@ To verify the results between sw and hw side, you can execute `inference.py` und
 
 The two accelerators with different configurations can be found at `./TrackGNN/prj/dim_8_layer_1/` and `./TrackGNN/prj/dim_64_layer_4`, respectively. We have prepared the source codes and Makefile to deploy the accelerator on target U280 platform. To generate bitstream for the FPGA, follow these steps:
 
-In the `config.h` file, uncomment  `#EMU` to enable emulation mode for hardware implementation and make the project.
+First, set up the vitis environment by running these command:
+
+```bash
+source <VITIS_install_path>/settings64.sh
+source <XRT_install_path>/setup.sh
+```
+
+In the `config.h` file, uncomment  `#EMU` to enable emulation mode for hardware implementation and make the project. (Alternatively, uncomment `#SIM` to run simulation)
 
 ```bash
 make all
 ```
 
-Once the bitstream is generated, program the FPGA and execute the host application:
+Once the bitstream is generated, execute the host application and program the FPGA by the following command:
 ```bash
 ./host_app ./path_to_your_xclbin_file
 ```
